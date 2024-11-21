@@ -1,0 +1,59 @@
+/* styles.css */
+.btn {
+  @apply relative w-full rounded-lg border-none outline-none z-0;
+  transform: scale(1); /* Padrão sem hover */
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Crescimento leve no hover */
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    124deg,
+    rgba(40, 80, 110, 1),
+    rgba(80, 170, 200, 1),
+    rgba(40, 80, 110, 1),
+    #000000,
+    rgba(40, 80, 110, 1),
+    rgba(80, 170, 200, 1)
+  );
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  animation: move 20s linear infinite;
+  opacity: 1; /* O efeito está sempre presente */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 80, 110, 1);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
