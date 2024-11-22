@@ -38,19 +38,19 @@
     <link href="./docs/css/gradienteBotao.css" rel="stylesheet">
     <link href="./docs/css/gradienteTexto.css" rel="stylesheet">
     <link href="./docs/css/setas.css" rel="stylesheet">
-    <script src="./docs/js/menu.js"></script>
+    <script src="./docs/js/video.js" defer></script>
 </head>
 
-<body class="bg-gradient-to-r from-custom-light-blue to-custom-dark-blue">
-    <header class="fixed inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+<body>
+    <!-- <header class="fixed">
+        <nav class="flex items-center justify-between p-6 lg:px-8">
             <div class="flex lg:flex-1 flex-row">
                 <a href="#" class="-m-1.5 p-1.5 flex flex-row items-center gap-5">
                     <img class="h-[50px] filter invert" style="filter: brightness(100);"
                         src="./docs/images/lsg_assessoria_digital_ico.png" alt="">
                 </a>
             </div>
-            <!-- <button id="botao_abrir_menu" type="button" onclick="toggleMenu()"
+            <button id="botao_abrir_menu" type="button" onclick="toggleMenu()"
                 class="-m-2.5 lg:hidden items-center justify-center rounded-md p-2.5 text-white">
                 <span class="sr-only">Open main menu</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -108,16 +108,16 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </nav>
-    </header>
-
+    </header> -->
     <main>
-        <section id="inicio" class="min-h-screen w-full flex content-center justify-center items-center relative">
+        <section id="inicio"
+            class="relative isolate overflow-hidden min-h-screen w-full flex content-center justify-center items-center">
             <img src="./docs/images/Fundo-estrelado.png" alt="imagem de fundo"
                 class="hidden md:flex absolute inset-0 -z-10 w-full h-screen object-cover sm:h-auto sm:min-h-screen">
             <img src="./docs/images/Fundo-estrelado-vertical.png" alt="imagem de fundo"
-                class="flex md:hidden absolute inset-0 -z-10 w-auto h-full object-cover sm:h-auto sm:min-h-screen">
+                class="flex md:hidden absolute inset-0 -z-10 w-full h-full object-cover sm:h-auto sm:min-h-screen">
             <div
                 class="min-h-screen w-full flex flex-col md:flex-row content-center justify-center items-center mt-10 md:mt-0">
                 <div class="h-4/5 w-full md:h-screen md:w-1/2 flex-col flex justify-center content-center items-center">
@@ -132,7 +132,7 @@
                             Domine o mercado com a gente!
                         </h2>
                     </div>
-                    <div class="containerSetas flex justify-center items-start content-center relative">
+                    <div class="hidden md:flex containerSetas justify-center items-start content-center relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="setas setas-pequenas" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -144,7 +144,7 @@
                                 <path fill-rule="evenodd"
                                     d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
                                 class="setas setas-maiores" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
@@ -167,7 +167,6 @@
                                     d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
                             </svg>
                         </div>
-
                     </div>
                 </div>
                 <div
@@ -218,10 +217,11 @@
                         </div>
                         <div class="relative z-0 w-full group">
                             <select id="quantidade_colaboradores" name="quantidade_colaboradores"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
-                                aria-placeholder="" required>
-                                <option disabled selected value="" class="text-gray-400">Quantos colaboradores sua
-                                    empresa possui?
+                                class="block py-2.5 px-0 w-full text-sm text-gray-400 focus:text-custom-light-blue bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
+                                placeholder="" required>
+                                <option disabled selected value="" class="text-gray-400 focus:text-custom-light-blue ">
+                                    Quantos colaboradores sua
+                                    empresa possui ?
                                 </option>
                                 <option value="1">Não possuo colaboradores</option>
                                 <option value="2">De 1 a 5 colaboradores</option>
@@ -232,7 +232,7 @@
                                 <option value="7">Acima de 100 colaboradores</option>
                             </select>
                             <label for="quantidade_colaboradores"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100  focus:text-custom-light-blue peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                class="peer-focus:font-medium absolute text-sm focus:text-custom-light-blue  text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
                                 Selecione uma opção</label>
                         </div>
                         <div class="stage flex items-center justify-left w-full">
@@ -244,65 +244,61 @@
                         </div>
                     </form>
                 </div>
-            </div>
-        </section>
-
-        <section id="servicos">
-            <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-                    alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
-
-                <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-                    aria-hidden="true">
-                    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#1e3a8a] to-[#000000] opacity-20"
-                        style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+                <div class="flex md:hidden containerSetas justify-center items-start content-center relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="setas setas-pequenas" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                    </svg>
+                    <div class="flex justify-center items-start content-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor"
+                            class="setas setas-maiores" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+                            class="setas setas-maiores" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                            class="setas setas-maiores" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
                     </div>
-                </div>
-                <div class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div class="mx-auto max-w-2xl lg:mx-0">
-                        <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Work with us</h2>
-                        <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Anim aute id magna
-                            aliqua
-                            ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                            occaecat fugiat.</p>
-                    </div>
-                    <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-                        <div
-                            class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-                            <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
-                            <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
-                            <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
-                            <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
-                        </div>
-                        <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
-                            <div class="flex flex-col-reverse gap-1">
-                                <dt class="text-base/7 text-gray-300">Offices worldwide</dt>
-                                <dd class="text-4xl font-semibold tracking-tight text-white">12</dd>
-                            </div>
-                            <div class="flex flex-col-reverse gap-1">
-                                <dt class="text-base/7 text-gray-300">Full-time colleagues</dt>
-                                <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
-                            </div>
-                            <div class="flex flex-col-reverse gap-1">
-                                <dt class="text-base/7 text-gray-300">Hours per week</dt>
-                                <dd class="text-4xl font-semibold tracking-tight text-white">40</dd>
-                            </div>
-                            <div class="flex flex-col-reverse gap-1">
-                                <dt class="text-base/7 text-gray-300">Paid time off</dt>
-                                <dd class="text-4xl font-semibold tracking-tight text-white">Unlimited</dd>
-                            </div>
-                        </dl>
+                    <div class="flex justify-center items-start content-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="setas setas-pequenas" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="setas setas-pequenas" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="apresentacao"
+            class="relative isolate overflow-hidden bg-black py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <video id="video" class="w-full rounded-2xl" controls>
+                    <source src="./docs/videos/IMG_8377.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
     </main>
-    <footer id="contato" class="bg-custom-light-blue w-full">
+    <footer id="contato" class="bg-black w-full">
         <div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
-            <span class="block text-sm text-gray-500 sm:text-center">© 2024 <a href="https://www.marcospaulosilva.com"
-                    class="hover:underline" target="_blank">
+            <span class="block text-sm text-custom-light-blue sm:text-center">© 2024 <a
+                    href="https://www.marcospaulosilva.com" class="hover:underline" target="_blank">
                     Desenvolvido por Marcos Paulo Silva</a>. Todos os direitos reservados.</span>
         </div>
     </footer>
 </body>
+
 </html>
