@@ -1,12 +1,11 @@
-/* styles.css */
 .btn {
   @apply relative w-full rounded-lg border-none outline-none z-0;
-  transform: scale(1); /* Padrão sem hover */
+  transform: scale(1);
   transition: transform 0.3s ease-in-out;
 }
 
 .btn:hover {
-  transform: scale(1.05); /* Crescimento leve no hover */
+  transform: scale(1.05);
 }
 
 .btn::before {
@@ -18,18 +17,17 @@
   top: -2px;
   background: linear-gradient(
     124deg,
-    rgba(40, 80, 110, 1),
-    rgba(80, 170, 200, 1),
-    rgba(40, 80, 110, 1),
-    #000000,
-    rgba(40, 80, 110, 1),
-    rgba(80, 170, 200, 1)
+    #0e316a,
+    #0060ff,
+    #ffffff,
+    #0060ff,
+    #0060ff
   );
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
   animation: move 20s linear infinite;
-  opacity: 1; /* O efeito está sempre presente */
+  opacity: 1;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   border-radius: 10px;
 }
@@ -39,7 +37,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(40, 80, 110, 1);
+  background: #0060ff;
   left: 0;
   top: 0;
   z-index: -1;

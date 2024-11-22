@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
+    "./src/**/*.{html,js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
@@ -8,7 +8,7 @@ module.exports = {
         funnel: ['"Funnel Display"', 'sans-serif'],
       },
       colors: {
-        'custom-light-blue': 'rgba(80, 170, 200, 1)',
+        'custom-light-blue': '#0060ff',
         'custom-dark-blue': 'rgba(40, 80, 110, 1)',
       },
       keyframes: {
@@ -20,7 +20,12 @@ module.exports = {
       },
       animation: {
         move: 'move 20s linear infinite',
-      }
+      },
+    },
+  },
+  variants: {
+    extend: {
+      animation: ['hover', 'focus'],
     },
   },
   plugins: [],
