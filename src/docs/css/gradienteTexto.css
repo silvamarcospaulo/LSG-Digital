@@ -1,0 +1,25 @@
+.gradienteFont {
+  background: linear-gradient(
+    124deg,
+    #0066ff,
+    #8d8d8d,
+    #0066ff,
+    #0a0a0a
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveText 20s linear infinite;
+}
+
+@keyframes moveText {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0; 
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

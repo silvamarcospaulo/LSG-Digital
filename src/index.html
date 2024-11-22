@@ -35,9 +35,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
-    <link href="./docs/css/style.css" rel="stylesheet">
+    <link href="./docs/css/gradienteBotao.css" rel="stylesheet">
+    <link href="./docs/css/gradienteTexto.css" rel="stylesheet">
+    <link href="./docs/css/setas.css" rel="stylesheet">
     <script src="./docs/js/menu.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gradient-to-r from-custom-light-blue to-custom-dark-blue">
@@ -49,7 +50,7 @@
                         src="./docs/images/lsg_assessoria_digital_ico.png" alt="">
                 </a>
             </div>
-            <button id="botao_abrir_menu" type="button" onclick="toggleMenu()"
+            <!-- <button id="botao_abrir_menu" type="button" onclick="toggleMenu()"
                 class="-m-2.5 lg:hidden items-center justify-center rounded-md p-2.5 text-white">
                 <span class="sr-only">Open main menu</span>
                 <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -107,97 +108,141 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </nav>
     </header>
 
     <main>
-        <section id="inicio" class="h-screen w-full flex content-center justify-center items-center">
-            <div class="h-[80%] w-[90%]">
-                <img src="./docs/images/Fundo-estrelado.png" alt="imagem de fundo"
-                    class="opacity-100 mix-blend-multiply absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
-                <div class="h-full w-full flex-col md:flex-row flex justify-center content-center items-center">
-                    <div class="h-full w-full flex-col flex justify-center content-center items-center">
-                        <div class="flex flex-col w-5/6 h-5/6 justify-center content-center items-start gap-8">
-                            <h1 class="text-left font-funnel font-bold text-white text-4xl md:text-6xl">
-                                Leve sua empresa ao próximo nível com a LSG Digital!
-                            </h1>
-                            <h2 class="text-left font-funnel font-bold text-white text-2xl md:text-1xl">
-                                Sua empresa está pronta para crescer?</br>Nós estamos prontos para te ajudar.
+        <section id="inicio" class="min-h-screen w-full flex content-center justify-center items-center relative">
+            <img src="./docs/images/Fundo-estrelado.png" alt="imagem de fundo"
+                class="hidden md:flex absolute inset-0 -z-10 w-full h-screen object-cover sm:h-auto sm:min-h-screen">
+            <img src="./docs/images/Fundo-estrelado-vertical.png" alt="imagem de fundo"
+                class="flex md:hidden absolute inset-0 -z-10 w-auto h-full object-cover sm:h-auto sm:min-h-screen">
+            <div
+                class="min-h-screen w-full flex flex-col md:flex-row content-center justify-center items-center mt-10 md:mt-0">
+                <div class="h-4/5 w-full md:h-screen md:w-1/2 flex-col flex justify-center content-center items-center">
+                    <div class="flex flex-col justify-center content-center items-center gap-8 p-9">
+                        <h1 class="text-left font-funnel font-bold text-white text-4xl md:text-6xl">
+                            Garanta já <span class="gradienteFont">O Plano</span> para alavancar os resultados da sua
+                            empresa em 2025!
+                        </h1>
+                        <h2 class="text-left font-funnel font-bold text-white text-2xl md:text-1xl">
+                            Quem planeja, vende. Em 2025, deixe sua concorrência para trás com estratégias digitais sob
+                            medida. Nossa agência transforma planejamento em lucro: você atrai, encanta e vende mais.
+                            Domine o mercado com a gente!
+                        </h2>
+                    </div>
+                    <div class="containerSetas flex justify-center items-start content-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="setas setas-pequenas" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                        </svg>
+                        <div class="flex justify-center items-start content-center relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="currentColor"
+                                class="setas setas-maiores" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+                                class="setas setas-maiores" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                                class="setas setas-maiores" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+                        <div class="flex justify-center items-start content-center relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="setas setas-pequenas" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="setas setas-pequenas" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4" />
+                            </svg>
+                        </div>
+
+                    </div>
+                </div>
+                <div
+                    class="h-full w-full md:h-full md:w-1/2 flex-col flex justify-center content-center items-center p-9">
+                    <form
+                        class="rounded-lg bg-black/50 backdrop-blur-md border-custom-light-blue border-2 flex flex-col justify-center items-start gap-8 p-9">
+                        <div>
+                            <h2
+                                class="text-center text-pretty font-funnel font-semibold text-custom-light-blue text-4xl">
+                                Consultoria gratuita especializada em alavancar empresas
                             </h2>
                         </div>
-                    </div>
-                    <div class="h-full w-full flex-col lg:flex-row flex justify-center items-center gap-4">
-                        <form
-                            class="p-9 rounded-lg bg-black/50 backdrop-blur-md border-custom-light-blue border-2 w-5/6 h-5/6 flex flex-col justify-center items-start gap-8">
-                            <div>
-                                <h2 class="text-center text-pretty font-funnel font-semibold text-custom-light-blue text-4xl ">
-                                    Consultoria gratuita especializada em alavancar empresas
-                                </h2>
-                            </div>
-                            <div class="grid md:grid-cols-2 md:gap-6">
-                                <div class="relative z-0 w-full mb-5 group">
-                                    <input type="text" name="floating_first_name" id="floating_first_name"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
-                                        placeholder="" required />
-                                    <label for="floating_first_name"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                        Primeiro nome</label>
-                                </div>
-                                <div class="relative z-0 w-full mb-5 group">
-                                    <input type="text" name="floating_last_name" id="floating_last_name"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
-                                        placeholder=" " required />
-                                    <label for="floating_last_name"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                        Sobrenome</label>
-                                </div>
-                            </div>
-                            <div class="grid md:grid-cols-2 md:gap-6">
-                                <div class="relative z-0 w-full mb-5 group">
-                                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="whatsapp" id="whatsapp"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
-                                        placeholder=" " required />
-                                    <label for="whatsapp"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                        Seu melhor WhatsApp</label>
-                                </div>
-                                <div class="relative z-0 w-full mb-5 group">
-                                    <input type="email" name="email" id="email"
-                                        class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
-                                        placeholder=" " required />
-                                    <label for="email"
-                                        class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                        Seu melhor e-mail</label>
-                                </div>
+                        <div class="grid md:grid-cols-2 md:gap-6 w-full">
+                            <div class="relative z-0 w-full mb-5 group">
+                                <input type="text" name="floating_first_name" id="floating_first_name"
+                                    class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
+                                    placeholder="" required />
+                                <label for="floating_first_name"
+                                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                    Primeiro nome</label>
                             </div>
                             <div class="relative z-0 w-full group">
-                                <select id="quantidade_colaboradores" name="quantidade_colaboradores"
+                                <input type="text" name="floating_last_name" id="floating_last_name"
                                     class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
-                                    aria-placeholder="ola" required>
-                                    <option disabled selected value="" class="text-gray-400">Quantos colaboradores sua empresa possui?
-                                    </option>
-                                    <option value="1">Não possuo colaboradores</option>
-                                    <option value="2">De 1 a 5 colaboradores</option>
-                                    <option value="3">De 5 a 10 colaboradores</option>
-                                    <option value="4">De 10 a 30 colaboradores</option>
-                                    <option value="5">De 30 a 50 colaboradores</option>
-                                    <option value="6">De 50 a 100 colaboradores</option>
-                                    <option value="7">Acima de 100 colaboradores</option>
-                                </select>
-                                <label for="quantidade_colaboradores"
-                                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100  focus:text-custom-light-blue peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                                    Selecione uma opção</label>
+                                    placeholder=" " required />
+                                <label for="floating_last_name"
+                                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                    Sobrenome</label>
                             </div>
-                            <div class="stage flex items-center justify-left w-full">
-                                <button
-                                    class="btn w-full px-5 py-3 md:px-7 md:py-4 bg-custom-light-blue rounded-lg flex items-center justify-center relative opacity-100"
-                                    aria-label="Garanta seu sucesso">
-                                    <span class="text-white text-xl uppercase font-semibold">Garanta seu sucesso</span>
-                                </button>
+                        </div>
+                        <div class="grid md:grid-cols-2 md:gap-6 w-full">
+                            <div class="relative z-0 w-full mb-5 group">
+                                <input type="tel" pattern="[0-9]{2}-[0-9]{9}" name="whatsapp" id="whatsapp"
+                                    class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
+                                    placeholder=" " required />
+                                <label for="whatsapp"
+                                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                    Seu melhor WhatsApp</label>
                             </div>
-                        </form>
-                    </div>
+                            <div class="relative z-0 w-full mb-5 group">
+                                <input type="email" name="email" id="email"
+                                    class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
+                                    placeholder=" " required />
+                                <label for="email"
+                                    class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:text-custom-light-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                    Seu melhor e-mail</label>
+                            </div>
+                        </div>
+                        <div class="relative z-0 w-full group">
+                            <select id="quantidade_colaboradores" name="quantidade_colaboradores"
+                                class="block py-2.5 px-0 w-full text-sm text-gray-400 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-custom-light-blue peer"
+                                aria-placeholder="" required>
+                                <option disabled selected value="" class="text-gray-400">Quantos colaboradores sua
+                                    empresa possui?
+                                </option>
+                                <option value="1">Não possuo colaboradores</option>
+                                <option value="2">De 1 a 5 colaboradores</option>
+                                <option value="3">De 5 a 10 colaboradores</option>
+                                <option value="4">De 10 a 30 colaboradores</option>
+                                <option value="5">De 30 a 50 colaboradores</option>
+                                <option value="6">De 50 a 100 colaboradores</option>
+                                <option value="7">Acima de 100 colaboradores</option>
+                            </select>
+                            <label for="quantidade_colaboradores"
+                                class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-placeholder-shown:scale-100  focus:text-custom-light-blue peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                                Selecione uma opção</label>
+                        </div>
+                        <div class="stage flex items-center justify-left w-full">
+                            <button
+                                class="gradienteBotao w-full px-5 py-3 md:px-7 md:py-4 bg-custom-light-blue rounded-lg flex items-center justify-center relative opacity-100"
+                                aria-label="Garanta seu sucesso">
+                                <span class="text-white text-xl uppercase font-semibold">Garanta seu sucesso</span>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -252,14 +297,12 @@
             </div>
         </section>
     </main>
-
-    <footer id="contato" class="bg-[#002c69]">
-        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <footer id="contato" class="bg-custom-light-blue w-full">
+        <div class="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
             <span class="block text-sm text-gray-500 sm:text-center">© 2024 <a href="https://www.marcospaulosilva.com"
                     class="hover:underline" target="_blank">
                     Desenvolvido por Marcos Paulo Silva</a>. Todos os direitos reservados.</span>
         </div>
     </footer>
 </body>
-
 </html>

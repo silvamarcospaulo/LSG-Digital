@@ -1,14 +1,14 @@
-.btn {
+.gradienteBotao {
   @apply relative w-full rounded-lg border-none outline-none z-0;
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
 }
 
-.btn:hover {
+.gradienteBotao:hover {
   transform: scale(1.05);
 }
 
-.btn::before {
+.gradienteBotao::before {
   content: "";
   position: absolute;
   width: calc(100% + 4px);
@@ -17,11 +17,11 @@
   top: -2px;
   background: linear-gradient(
     124deg,
-    #0e316a,
-    #0060ff,
-    #ffffff,
-    #0060ff,
-    #0060ff
+    #2b2b2b,
+    #0066ff,
+    #8d8d8d,
+    #0066ff,
+    #0a0a0a
   );
   background-size: 400%;
   z-index: -1;
@@ -32,7 +32,7 @@
   border-radius: 10px;
 }
 
-.btn::after {
+.gradienteBotao::after {
   content: "";
   position: absolute;
   width: 100%;
