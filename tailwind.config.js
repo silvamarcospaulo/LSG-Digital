@@ -21,6 +21,9 @@ module.exports = {
       animation: {
         move: 'move 20s linear infinite',
       },
+      boxShadow: {
+        'text': '0px 2px 5px rgba(0, 0, 0, 0.15)', // Sombra para texto
+      },
     },
   },
   variants: {
