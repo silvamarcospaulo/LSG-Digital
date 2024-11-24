@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Reescreve URLs sem .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)/?$ $1.html [L]

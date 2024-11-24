@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado com Sucesso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .sucesso {
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="sucesso">
+        <h1>Cadastro Realizado com Sucesso!</h1>
+        <p id="mensagem"></p>
+    </div>
+
+    <script>
+        // Captura os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nome = urlParams.get('nome'); // Obtém o nome do parâmetro 'nome' da URL
+
+        // Exibe uma mensagem personalizada para o cliente
+        if (nome) {
+            document.getElementById('mensagem').innerText = `Obrigado por se cadastrar, ${nome}. Em breve entraremos em contato!`;
+        } else {
+            document.getElementById('mensagem').innerText = "Obrigado por se cadastrar. Em breve entraremos em contato!";
+        }
+    </script>
+</body>
+</html>
